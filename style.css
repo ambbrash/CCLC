@@ -33,7 +33,6 @@ body {
   left: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 8px 30px; /* increased horizontal padding for outer spacing */
 }
 
 .header-container {
@@ -41,15 +40,18 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  padding: 8px 30px; /* desktop horizontal padding */
 }
 
+/* Logo */
 .logo img {
   height: 60px;
   max-width: 100%;
   object-fit: contain;
-  margin-left: 50px; /* extra spacing from left edge */
+  margin-left: 10px;
 }
 
+/* Contact button */
 .btn-contact {
   background: #2c7a3e;
   color: white;
@@ -59,12 +61,48 @@ body {
   font-weight: 500;
   transition: background 0.3s ease;
   white-space: nowrap;
-  margin-right: 50px; /* extra spacing from right edge */
+  margin-right: 10px;
 }
 
 .btn-contact:hover {
   background: #1f5a2a;
 }
+
+/* Mobile / Tablet adjustments */
+@media (max-width: 900px) {
+  .header-container {
+    padding: 8px 20px; /* slightly smaller padding on tablets */
+  }
+
+  .logo img {
+    height: 55px;
+    margin-left: 8px;
+  }
+
+  .btn-contact {
+    padding: 7px 14px;
+    margin-right: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    padding: 6px 15px; /* even smaller for phones */
+  }
+
+  .logo img {
+    height: 50px;
+    margin-left: 5px;
+  }
+
+  .btn-contact {
+    padding: 6px 12px;
+    margin-right: 5px;
+    font-size: 13px;
+  }
+}
+
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
